@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Calculadora Web</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}" />
+</head>
+<body>
+  <header>
+    <h1>Calculadora Web</h1>
+  </header>
+  <main>
+    <h2>Realiza operaciones básicas</h2>
+    <div class="calculator">
+      <form method="POST" action="/">
+        <input type="text" name="expression" class="display" id="display" value="{{ expression }}" readonly />
+        <div class="buttons">
+          <button type="submit" name="btn" value="C" class="button clear span-2">C</button>
+          <button type="submit" name="btn" value="/" class="button operator">/</button>
+          <button type="submit" name="btn" value="*" class="button operator">*</button>
+
+          <button type="submit" name="btn" value="7" class="button number">7</button>
+          <button type="submit" name="btn" value="8" class="button number">8</button>
+          <button type="submit" name="btn" value="9" class="button number">9</button>
+          <button type="submit" name="btn" value="-" class="button operator">-</button>
+
+          <button type="submit" name="btn" value="4" class="button number">4</button>
+          <button type="submit" name="btn" value="5" class="button number">5</button>
+          <button type="submit" name="btn" value="6" class="button number">6</button>
+          <button type="submit" name="btn" value="+" class="button operator">+</button>
+
+          <button type="submit" name="btn" value="1" class="button number">1</button>
+          <button type="submit" name="btn" value="2" class="button number">2</button>
+          <button type="submit" name="btn" value="3" class="button number">3</button>
+          <button type="submit" name="btn" value="=" class="button equals span-2">=</button>
+
+          <button type="submit" name="btn" value="0" class="button number span-2">0</button>
+          <button type="submit" name="btn" value="." class="button decimal">.</button>
+        </div>
+      </form>
+    </div>
+  </main>
+  <footer>
+    <p>Proyecto de calculadora - 2025</p>
+  </footer>
+</body>
+</html>
+
+
+
+
