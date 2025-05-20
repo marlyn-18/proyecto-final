@@ -1,45 +1,81 @@
-/* Estilos generales */
 body {
-    font-family: sans-serif; /* Establece la fuente del texto a una fuente sans-serif */
-    margin: 0;          /* Elimina el margen predeterminado del cuerpo de la página */
-    padding: 0;         /* Elimina el relleno predeterminado del cuerpo de la página */
-    background-color: #f4f4f4;  /* Establece el color de fondo de la página a un gris claro */
-    color: #333;           /* Establece el color del texto principal a un gris oscuro */
-    display: flex;       /* Utiliza Flexbox para el diseño de la página */
-    flex-direction: column;  /* Organiza los elementos en una columna */
-    min-height: 100vh;    /* Establece la altura mínima del cuerpo al 100% de la altura de la ventana */
-                        /* Esto asegura que el pie de página se pegue a la parte inferior
-                           incluso si el contenido principal no llena toda la pantalla */
+  background: #21232a;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
-header, footer {
-    background-color: #b71010;  /* Establece el color de fondo del encabezado y pie de página a negro */
-    color: white;          /* Establece el color del texto del encabezado y pie de página a blanco */
-    text-align: center;    /* Centra el texto horizontalmente en el encabezado y pie de página */
-    padding: 1em 0;       /* Agrega relleno vertical (arriba y abajo) al encabezado y pie de página */
+.calculator {
+  background: #2d9cdb;
+  border-radius: 24px;
+  box-shadow: 0 0 20px #0008;
+  padding: 32px 24px;
+  width: 340px;
 }
 
-header h1 {
-    margin: 0;          /* Elimina el margen predeterminado del encabezado h1 para un mejor control del espaciado */
+.display {
+  width: 100%;
+  height: 60px;
+  font-size: 2rem;
+  border-radius: 12px;
+  border: none;
+  padding: 0 15px;
+  margin-bottom: 20px;
+  background: #21232a;
+  color: white;
+  text-align: right;
+  font-family: monospace;
 }
 
-main {
-    padding: 20px;        /* Agrega relleno alrededor del contenido principal */
-    flex: 1;            /* Permite que la sección <main> se expanda y ocupe el espacio restante */
-                        /* Esto es importante para empujar el pie de página hacia la parte inferior */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 12px;
 }
 
-main h2 {
-    color: #334799;      /* Establece el color del texto para los encabezados <h2> a un color púrpura */
-    background-color: #3c923f;
+.btn {
+  background: #39a6e6;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  padding: 15px 0;
+  transition: background 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-main p {
-    line-height: 0.6;    /* Establece el espaciado entre líneas para mejorar la legibilidad del texto en los párrafos */
+.btn:hover {
+  background: #217dbb;
 }
 
-footer {
-    margin-top: auto;    /* Empuja el pie de página hacia la parte inferior de la ventana del navegador */
-                        /* Esto asegura que el pie de página esté siempre en la parte inferior,
-                           incluso si el contenido principal es corto */
+.operator {
+  background: #39a6e6;
+}
+
+.equals {
+  background: #f25c54;
+  grid-row: span 2;
+}
+
+.equals:hover {
+  background: #c0392b;
+}
+
+.clear {
+  background: #21232a;
+}
+
+.clear:hover {
+  background: #44495a;
+}
+
+.zero {
+  grid-column: span 2;
 }
